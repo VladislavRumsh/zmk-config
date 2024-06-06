@@ -29,22 +29,22 @@
             then-layer = <3>;
         };
     };
-
-        keymap {
-            compatible = "zmk,keymap";
-            default_layer {
+        
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
                 bindings = <
             //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            //│  '       │  ,       │  .       │  P       │  Y       │   │  F       │  G       │  C       │  R       │  L       │
-                &kp QUOT  &kp COMM  &kp DOT   &kp P      &kp Y         &kp F      &kp G      &kp C      &kp R      &kp L
+            //│  ' "     │  , <     │  . >     │  P       │  Y       │   │  F       │  G       │  C       │  R       │  L       │
+                &kp SQT   &kp COMM  &kp DOT    &kp P      &kp Y          &kp F      &kp G      &kp C      &kp R      &kp L
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│  A       │  O       │  E       │  U       │  I       │   │  D       │  H       │  T       │  N       │  S       │
-                HRML(A,        O,         E,         U)     &kp I         &kp D      HRMR(H,        T,         N,        S)
+                HRML(A,        O,         E,         U)     &kp I          &kp D      HRMR(H,        T,         N,        S)
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│  ;       │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │  Z       │
-                &kp SCLN  &kp Q      &kp J      &kp K      &kp X         &kp B      &kp M      &kp W      &kp V      &kp Z
+                &kp SCLN  &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                                    &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
                 >;
             };
@@ -56,7 +56,7 @@
                 &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-                &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+                &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SCLN
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
                &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
@@ -75,7 +75,7 @@
             //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
                 &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
+            //│          │          │          │          │          │   │  &       │  _       │  +       │  |       │          │
                 &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                  &trans     &trans         &trans     &trans
