@@ -106,7 +106,7 @@
         right_layer {
             bindings = <
 &kp INSERT  &kp N1  &kp N2  &kp N3   &trans     &kp HOME        &kp PG_DN     &kp PG_UP       &kp END    &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6   &trans     &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp SLASH
+&kp DEL     &kp N4  &kp N5  &kp N6   &trans     &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp SEMICOLON
 &caps_word  &kp N7  &kp N8  &kp N9   &kp N0     &kp PLUS        &kp MINUS     &kp ASTERISK    &kp SLASH  &kp EQUAL
                             &kp TAB  &kp ESC    &trans          &trans
             >;
