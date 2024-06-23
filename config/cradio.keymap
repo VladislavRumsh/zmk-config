@@ -107,6 +107,11 @@
             key-positions = <20 29>;
             layers = <3>;
         };
+
+        shift+enter {
+            bindings = <&kp ENTER>;
+            key-positions = <3 1 2 30>;
+        };
     };
 
     keymap {
