@@ -135,7 +135,7 @@
 
         from_game_to_default {
             bindings = <&to 0>;
-            key-positions = <30 21 22 23>;
+            key-positions = <21 20 30 24>;
             layers = <6>;
         };
 
@@ -160,16 +160,7 @@
 &kp Q  &kp W  &kp E  &kp R           &kp T          &kp Y        &kp U          &kp I      &kp O    &kp P
 &kp A  &kp S  &kp D  &kp F           &kp G          &kp H        &kp J          &kp K      &kp L    &kp SQT
 &kp Z  &kp X  &kp C  &kp V           &kp B          &kp N        &kp M          &kp COMMA  &kp DOT  &kp SLASH
-                     &kp LEFT_SHIFT  &lt 2 ENTER    &lt 1 SPACE  &kp BACKSPACE
-            >;
-        };
-
-        right_layer {
-            bindings = <
-&kp INSERT   &kp N1  &kp N2  &kp N3   &kp PRINTSCREEN    &kp HOME        &kp PG_DN  &kp PG_UP     &kp END    &kp COLON
-&kp DEL      &kp N4  &kp N5  &kp N6   &key_repeat        &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp SEMICOLON
-&kp LS(TAB)  &kp N7  &kp N8  &kp N9   &kp N0             &kp PLUS        &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL
-                             &kp TAB  &kp ESC            &trans          &trans
+                     &kp LEFT_SHIFT  &lt 1 ENTER    &lt 2 SPACE  &kp BACKSPACE
             >;
         };
 
@@ -179,6 +170,15 @@
 &kp EXCL      &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp BSLH       &kp GRAVE
 &kp QUESTION  &trans             &trans    &trans    &trans       &kp AMPS   &kp UNDER      &kp MINUS     &kp EQUAL      &kp PIPE
                                            &trans    &trans       &trans     &trans
+            >;
+        };
+
+        right_layer {
+            bindings = <
+&kp INSERT   &kp N1  &kp N2  &kp N3   &kp PRINTSCREEN    &kp HOME        &kp PG_DN  &kp PG_UP     &kp END    &kp COLON
+&kp DEL      &kp N4  &kp N5  &kp N6   &key_repeat        &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp SEMICOLON
+&kp LS(TAB)  &kp N7  &kp N8  &kp N9   &kp N0             &kp PLUS        &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL
+                             &kp TAB  &kp ESC            &trans          &trans
             >;
         };
 
@@ -193,7 +193,7 @@
 
         left_hand {
             bindings = <
-&kp LG(Q)  &kp LC(W)  &kp LC(Y)  &kp LC(U)       &kp TAB        &trans  &trans  &trans  &trans  &trans
+&kp LG(Q)  &kp LC(W)  &kp LC(Y)  &kp LC(LS(T))   &kp TAB        &trans  &trans  &trans  &trans  &trans
 &kp LC(A)  &kp LC(S)  &kp LG(F)  &kp BACKSPACE   &kp SPACE      &trans  &trans  &trans  &trans  &trans
 &kt LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)       &kp ESCAPE     &trans  &trans  &trans  &trans  &trans
                                  &kp LEFT_SHIFT  &lt 5 SPACE    &trans  &trans
@@ -232,8 +232,8 @@
         compatible = "zmk,conditional-layers";
 
         cond_layer1 {
-            if-layers = <1 5>;
-            then-layer = <2>;
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 };
