@@ -136,7 +136,7 @@
         from_game_to_default {
             bindings = <&to 0>;
             key-positions = <21 20 30 24>;
-            layers = <6>;
+            layers = <6 4>;
         };
 
         game_esc {
@@ -149,6 +149,11 @@
             bindings = <&to 7>;
             key-positions = <32 8 7 9>;
             layers = <0>;
+        };
+
+        toggleLeftHand {
+            bindings = <&tog 4>;
+            key-positions = <28 26 33 27>;
         };
     };
 
@@ -193,10 +198,10 @@
 
         left_hand {
             bindings = <
-&kp LG(Q)  &kp LC(W)  &kp LC(Y)  &kp LC(LS(T))   &kp TAB        &trans  &trans  &trans  &trans  &trans
-&kp LC(A)  &kp LC(S)  &kp LG(F)  &kp BACKSPACE   &kp SPACE      &trans  &trans  &trans  &trans  &trans
-&kt LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)       &kp ESCAPE     &trans  &trans  &trans  &trans  &trans
-                                 &kp LEFT_SHIFT  &lt 5 ENTER    &trans  &trans
+&kp LG(Q)  &kp LC(W)  &kp TAB        &kp ENTER       &kp LC(LS(T))    &trans  &trans  &trans  &trans  &trans
+&kp LC(A)  &kp LC(S)  &kp BACKSPACE  &kp LG(F)       &kp ESCAPE       &trans  &trans  &trans  &trans  &trans
+&kt LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)       &kp LC(Y)        &trans  &trans  &trans  &trans  &trans
+                                     &kp LEFT_SHIFT  &lt 5 SPACE      &trans  &trans
             >;
         };
 
