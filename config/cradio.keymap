@@ -184,7 +184,7 @@
 
         tri_layer {
             bindings = <
-&trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 0    &kp PRINTSCREEN  &trans             &caps_word       &trans  &trans
+&trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 0    &kp PRINTSCREEN  &trans             &trans           &trans  &trans
 &trans  &trans  &trans  &bt BT_SEL 4  &bt BT_SEL 1    &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans
 &trans  &trans  &trans  &bt BT_CLR    &bt BT_SEL 2    &trans           &trans             &trans           &trans  &trans
                         &trans        &trans          &trans           &trans
@@ -196,7 +196,7 @@
 &kp LG(Q)  &kp LC(W)  &kp LC(Y)  &kp LC(LS(T))   &kp TAB        &trans  &trans  &trans  &trans  &trans
 &kp LC(A)  &kp LC(S)  &kp LG(F)  &kp BACKSPACE   &kp SPACE      &trans  &trans  &trans  &trans  &trans
 &kt LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)       &kp ESCAPE     &trans  &trans  &trans  &trans  &trans
-                                 &kp LEFT_SHIFT  &lt 5 SPACE    &trans  &trans
+                                 &kp LEFT_SHIFT  &lt 5 ENTER    &trans  &trans
             >;
         };
 
@@ -220,10 +220,10 @@
 
         F_Layer {
             bindings = <
-&kp K_SLEEP  &kp F1  &kp F2  &kp F3      &kp F12    &trans  &trans  &trans  &trans  &trans
-&kp F20      &kp F4  &kp F5  &kp F6      &kp F11    &trans  &trans  &trans  &trans  &trans
-&kp F21      &kp F7  &kp F8  &kp F9      &kp F10    &trans  &trans  &trans  &trans  &trans
-                             &kp ESCAPE  &to 0      &trans  &trans
+&kp K_SLEEP  &kp F1  &kp F2  &kp F3      &kp F12      &trans  &trans  &trans  &trans  &caps_word
+&to 6        &kp F4  &kp F5  &kp F6      &kp F11      &trans  &trans  &trans  &trans  &trans
+&to 0        &kp F7  &kp F8  &kp F9      &kp F10      &trans  &trans  &trans  &trans  &trans
+                             &kp ESCAPE  &kp ENTER    &trans  &trans
             >;
         };
     };
