@@ -154,6 +154,23 @@
         toggleLeftHand {
             bindings = <&tog 4>;
             key-positions = <28 26 33 27>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        yankToSystemVIM: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp PLUS &kp Y>;
+            label = "NEW_MACRO";
+        };
+
+        copyFileVIM: copyFileVIM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp G &kp LS(V) &kp LS(G) &kp DQT &kp PLUS &kp Y>;
+            label = "COPYFILEVIM";
         };
     };
 
@@ -198,10 +215,10 @@
 
         left_hand {
             bindings = <
-&kp LG(Q)  &kp LC(W)  &kp TAB        &kp ENTER       &kp LC(LS(T))    &trans  &trans  &trans  &trans  &trans
-&kp LC(A)  &kp LC(S)  &kp BACKSPACE  &kp LG(F)       &kp ESCAPE       &trans  &trans  &trans  &trans  &trans
-&kt LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)       &kp LC(Y)        &trans  &trans  &trans  &trans  &trans
-                                     &kp LEFT_SHIFT  &lt 5 SPACE      &trans  &trans
+&kp LG(Q)    &kp LC(W)  &kp TAB        &kp ENTER       &kp LC(LS(T))    &trans  &trans  &trans  &trans  &trans
+&lt 8 LC(A)  &kp LC(S)  &kp BACKSPACE  &kp LG(F)       &kp ESCAPE       &trans  &trans  &trans  &trans  &trans
+&kt LC(Z)    &kp LC(X)  &kp LC(C)      &kp LC(V)       &kp LC(Y)        &trans  &trans  &trans  &trans  &trans
+                                       &kp LEFT_SHIFT  &lt 5 SPACE      &trans  &trans
             >;
         };
 
@@ -229,6 +246,15 @@
 &to 6        &kp F4  &kp F5  &kp F6      &kp F11      &trans  &trans  &trans  &trans  &trans
 &to 0        &kp F7  &kp F8  &kp F9      &kp F10      &trans  &trans  &trans  &trans  &trans
                              &kp ESCAPE  &kp ENTER    &trans  &trans
+            >;
+        };
+
+        left-macros {
+            bindings = <
+&trans  &yankToSystemVIM  &copyFileVIM  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans    &trans  &trans
             >;
         };
     };
