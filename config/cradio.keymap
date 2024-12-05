@@ -127,15 +127,9 @@
             layers = <0>;
         };
 
-        Game_Layer {
-            bindings = <&to 6>;
-            key-positions = <21 30 20 24>;
-            layers = <0>;
-        };
-
         from_game_to_default {
             bindings = <&to 0>;
-            key-positions = <21 20 30 24>;
+            key-positions = <21 20 23 30>;
             layers = <6 4>;
         };
 
