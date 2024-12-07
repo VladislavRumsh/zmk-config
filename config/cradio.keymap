@@ -253,17 +253,17 @@
             bindings = <
 &kp LA(LC(F1))  &kp F1  &kp F2  &kp F3      &kp F12      &kp K_SLEEP   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT
 &kp LA(LC(F2))  &kp F4  &kp F5  &kp F6      &kp F11      &kp K_COFFEE  &trans          &trans            &trans        &trans
-&kp LC(LA(F3))  &kp F7  &kp F8  &kp F9      &kp F10      &trans        &trans          &tog 3            &tog 6        &caps_word
+&kp LC(LA(F3))  &kp F7  &kp F8  &kp F9      &kp F10      &trans        &caps_word      &tog 3            &tog 6        &tog 0
                                 &kp ESCAPE  &kp ENTER    &trans        &trans
             >;
         };
 
         left-macros {
             bindings = <
-&trans  &yankToSystemVIM  &copyFileVIM  &trans  &trans    &vladrumsh  &vladislavrumsh  &trans  &trans  &tog 6
-&trans  &trans            &trans        &trans  &trans    &gmail_com  &trans           &trans  &trans  &tog 3
-&trans  &trans            &trans        &trans  &trans    &trans      &trans           &trans  &trans  &tog 7
-                                        &trans  &trans    &trans      &trans
+&trans  &yankToSystemVIM  &copyFileVIM  &trans     &trans       &vladrumsh  &vladislavrumsh  &trans  &trans  &tog 6
+&trans  &trans            &trans        &trans     &trans       &gmail_com  &trans           &trans  &trans  &tog 3
+&trans  &trans            &trans        &kp LG(M)  &kp LG(B)    &trans      &trans           &trans  &trans  &tog 7
+                                        &trans     &trans       &trans      &trans
             >;
         };
     };
