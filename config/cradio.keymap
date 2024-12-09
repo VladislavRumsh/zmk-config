@@ -181,6 +181,20 @@
             bindings = <&kp AT_SIGN &kp G &kp M &kp A &kp I &kp L &kp PERIOD &kp C &kp O &kp M>;
             label = "GMAIL_COM";
         };
+
+        Vim_paste_from_clipboard: Vim_paste_from_clipboard {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES &kp PLUS &kp P>;
+            label = "VIM_PASTE_FROM_CLIPBOARD";
+        };
+
+        Vim_replace: Vim_replace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp PERCENT &kp S &kp SLASH>;
+            label = "VIM_REPLACE";
+        };
     };
 
     keymap {
@@ -197,10 +211,10 @@
 
         left_layer {
             bindings = <
-&kp LBKT      &kp RIGHT_BRACKET  &kp LBRC  &kp RBRC  &trans       &kp TILDE  &kp LPAR       &kp RPAR      &kp LESS_THAN  &kp GREATER_THAN
-&kp EXCL      &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp BSLH       &kp GRAVE
-&kp QUESTION  &trans             &trans    &trans    &trans       &kp AMPS   &kp UNDER      &kp MINUS     &kp EQUAL      &kp PIPE
-                                           &trans    &trans       &trans     &trans
+&kp LBKT      &kp RIGHT_BRACKET  &kp LBRC  &kp RBRC  &kp LS(BACKSPACE)    &kp TILDE  &kp LPAR       &kp RPAR      &kp LESS_THAN  &kp GREATER_THAN
+&kp EXCL      &kp AT             &kp HASH  &kp DLLR  &kp PRCNT            &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp BSLH       &kp GRAVE
+&kp QUESTION  &trans             &trans    &trans    &trans               &kp AMPS   &kp UNDER      &kp MINUS     &kp EQUAL      &kp PIPE
+                                           &trans    &trans               &trans     &trans
             >;
         };
 
@@ -260,10 +274,10 @@
 
         left-macros {
             bindings = <
-&trans  &yankToSystemVIM  &copyFileVIM  &trans     &trans       &vladrumsh  &vladislavrumsh  &trans  &trans  &tog 6
-&trans  &trans            &trans        &trans     &trans       &gmail_com  &trans           &trans  &trans  &tog 3
-&trans  &trans            &trans        &kp LG(M)  &kp LG(B)    &trans      &trans           &trans  &trans  &tog 7
-                                        &trans     &trans       &trans      &trans
+&trans  &yankToSystemVIM  &copyFileVIM  &Vim_paste_from_clipboard  &Vim_replace    &vladrumsh  &vladislavrumsh  &trans  &trans  &tog 6
+&trans  &trans            &trans        &trans                     &trans          &gmail_com  &trans           &trans  &trans  &tog 3
+&trans  &trans            &trans        &kp LG(M)                  &kp LG(B)       &trans      &trans           &trans  &trans  &tog 7
+                                        &trans                     &trans          &trans      &trans
             >;
         };
     };
